@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\SituationController;
+use App\Http\Controllers\SuggestionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,20 @@ Route::controller(AuthenticationController::class)->group(function () {
 });
 
 Route::apiResource('situations', SituationController::class);
+
+Route::controller(SuggestionController::class)->group(function() {
+    // Get all suggestions under a particular situation
+    Route::get('/situations/{situationId}/suggestions', 'index');
+
+    // Create a new suggestion
+    Route::post('/situations/{situationId}/suggestions', 'store')->middleware('auth:sanctum');
+
+    // Get a specific suggestion by ID
+    Route::get('/suggestions/{id}', 'show');
+
+    // Update an existing suggestion
+    Route::put('/suggestions/{id}', 'update')->middleware('auth:sanctum');
+
+    // Delete a suggestion
+    Route::delete('/suggestions/{id}', 'destroy')->middleware('auth:sanctum');
+});

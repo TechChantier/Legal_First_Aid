@@ -4,18 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Situation extends Model
+class Suggestion extends Model
 {
     protected $table = 'situations';
 
     protected $fillable = [
-        'title',
-        'description',
+        'answer',
+        'situation_id',
+        'user_id',
+        'image'
     ];
 
-    public function suggestions()
+    public function situation()
     {
-        $this->hasMany(Suggestion::class);
+        $this->belongsTo(Situation::class);
     }
 
     public function user()
