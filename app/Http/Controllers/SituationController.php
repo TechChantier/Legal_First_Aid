@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\SituationResource;
 use App\Models\Situation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
@@ -40,6 +41,7 @@ class SituationController extends Controller
         $situation = Situation::create([
             'title' => $request->title,
             'description' => $request->description,
+            'user_id' => Auth::id()
         ]);
 
         if ($request->hasFile('image')) {
@@ -62,13 +64,17 @@ class SituationController extends Controller
 
     }
 
-    public function show(Situation $situation) 
+    public function show(int $id) 
     {
+        $situation = Situation::find($id);
+       
         return new SituationResource($situation);
     }
 
-    public function update(Request $request, Situation $situation)
+    public function update(Request $request, int $id)
      {
+        $situation = Situation::find($id);
+        logger($situation);
         $validator = Validator::make($request->all(), [
             'title' => 'sometimes|string|max:2000',
             'description' => 'sometimes',
@@ -109,11 +115,48 @@ class SituationController extends Controller
 
      }
 
-    public function destroy(Situation $situation)
+    public function destroy(int $id)
      {
+        $situation = Situation::find($id);
+        logger($situation);
         $situation->delete();
         return response()->json([
             'message' => 'Situation deleted successfully',
         ], 200);
      }
+
+     public function search()
+    {
+        try {
+
+            $query = Situation::query();
+
+            if (request()->has('search')) {
+            $search = request()->query('search');
+
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'LIKE', "%$search%")
+                    ->orWhere('description', 'LIKE', "%$search%");
+            });
+        }
+
+            $situations = $query->get();
+
+            return response()->json([
+                'success' => true,
+                'data' => SituationResource::collection($situations),
+               
+            ], 200);
+            
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'An error occurred while searching',
+                'error' => $e->getMessage()
+            ], 500);
+        }
+        
+    }
+    
 }
