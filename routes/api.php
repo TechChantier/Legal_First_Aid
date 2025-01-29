@@ -18,21 +18,7 @@ Route::controller(AuthenticationController::class)->group(function () {
 
 // Route::apiResource('situations', SituationController::class)->middleware('auth:sanctum');
 
-Route::controller(SituationController::class)->group(function() {
-    Route::get('situations', 'index');
-    Route::post('situations', 'store')->middleware('auth:sanctum');
-    // Add the filter route for situations
-    Route::get('situations', 'search');
-    Route::get('situations/{situationId}', 'show');
-    Route::match(['put', 'patch'], 'situations/{situationId}', 'update')->middleware('auth:sanctum'); 
-    Route::delete('situations/{situationId}', 'destroy')->middleware('auth:sanctum');
-
-});
-
-
-
-
-Route::controller(SuggestionController::class)->group(function() {
+Route::controller(SuggestionController::class)->group(function () {
     // Get all suggestions under a particular situation
     Route::get('/situations/{situationId}/suggestions', 'index');
 
@@ -48,5 +34,15 @@ Route::controller(SuggestionController::class)->group(function() {
     // Delete a suggestion
     Route::delete('/suggestions/{id}', 'destroy')->middleware('auth:sanctum');
 
-    Route::delete('/search-situation/{title}', 'destroy')->middleware('auth:sanctum');
+});
+
+Route::controller(SituationController::class)->group(function () {
+    Route::get('situations', 'index');
+    Route::post('situations', 'store')->middleware('auth:sanctum');
+    // Add the filter route for situations
+    Route::get('situations', 'search');
+    Route::get('situations/{situationId}', 'show');
+    Route::match(['put', 'patch'], 'situations/{situationId}', 'update')->middleware('auth:sanctum');
+    Route::delete('situations/{situationId}', 'destroy')->middleware('auth:sanctum');
+
 });

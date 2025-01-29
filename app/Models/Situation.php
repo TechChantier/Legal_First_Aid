@@ -16,11 +16,11 @@ class Situation extends Model
 
     public function suggestions()
     {
-        $this->hasMany(Suggestion::class);
+        return $this->hasMany(Suggestion::class);
     }
 
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 }

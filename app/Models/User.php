@@ -50,11 +50,11 @@ class User extends Authenticatable
 
     public function situations()
     {
-        $this->hasMany(Situation::class);
+        return $this->hasMany(Situation::class);
     }
 
     public function suggestions()
     {
-        $this->hasMany(Suggestion::class);
+        return $this->hasMany(Suggestion::class);
     }
 }

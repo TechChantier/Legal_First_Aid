@@ -6,22 +6,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class Suggestion extends Model
 {
-    protected $table = 'situations';
+    protected $table = 'suggestions';
 
     protected $fillable = [
+        'legal_system',
         'answer',
         'situation_id',
         'user_id',
-        'image'
+        'image',
     ];
 
     public function situation()
     {
-        $this->belongsTo(Situation::class);
+        return $this->belongsTo(Situation::class);
     }
 
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 }
