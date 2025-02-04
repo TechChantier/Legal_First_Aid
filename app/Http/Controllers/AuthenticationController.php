@@ -60,9 +60,8 @@ class AuthenticationController extends Controller
                     'email' => 'required|email|max:100|unique:users',
                     'password' => 'required|string|confirmed|min:8',
                     'image' => 'nullable|file|max:51200',
-                    'matricule' => 'required|string|max:1000',
+                    'matricule' => ['required', 'string', 'max:1000', 'regex:/^[A-Za-z0-9]+$/'],
                     'role' => 'required|in:lawyer',
-
                 ]);
             } elseif ($request->role == 'normal_user' && ! $request->matricule) {
                 $validator = Validator::make($request->all(), [

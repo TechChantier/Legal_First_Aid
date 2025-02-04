@@ -19,6 +19,7 @@ class SituationResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
             'image' => $this->image,
+            'is_sensitive' => $this->is_sensitive,
             'created_at' => $this->created_at,
         ];
     }

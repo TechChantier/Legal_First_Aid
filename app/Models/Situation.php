@@ -12,6 +12,7 @@ class Situation extends Model
         'title',
         'description',
         'user_id',
+        'is_sensitive',
     ];
 
     public function suggestions()

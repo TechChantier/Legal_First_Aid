@@ -104,6 +104,7 @@ class SituationController extends Controller
             'title' => 'required|string|max:2000',
             'description' => 'required',
             'image' => 'nullable|file|max:51200',
+            'is_sensitive' => 'boolean',
         ]);
 
         if($validator->fails())
@@ -118,7 +119,8 @@ class SituationController extends Controller
         $situation = Situation::create([
             'title' => $request->title,
             'description' => $request->description,
-            'user_id' => Auth::id()
+            'user_id' => Auth::id(),
+            'is_sensitive' => $request->is_sensitive ?? false,
         ]);
 
         if ($request->hasFile('image')) {
@@ -231,6 +233,8 @@ class SituationController extends Controller
             'title' => 'sometimes|string|max:2000',
             'description' => 'sometimes',
             'image' => 'nullable|file|max:51200',
+            'is_sensitive' => 'boolean',
+            
         ]);
 
         if($validator->fails())
@@ -245,6 +249,7 @@ class SituationController extends Controller
         $situation->update([
             'title' => $request->title ?? $situation->title,
             'description' => $request->description ?? $situation->description,
+            'is_sensitive' => $request->is_sensitive ?? $situation->is_sensitive,
         ]);
 
         if ($request->hasFile('image')) {
