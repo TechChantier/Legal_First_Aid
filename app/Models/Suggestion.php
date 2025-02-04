@@ -14,6 +14,7 @@ class Suggestion extends Model
         'situation_id',
         'user_id',
         'image',
+        'is_sensitive',
     ];
 
     public function situation()

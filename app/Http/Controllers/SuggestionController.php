@@ -205,6 +205,7 @@ class SuggestionController extends Controller
                 'legal_system'=> 'required|string|max:100',
                 'answer' => 'required|string|max:255',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:51200',
+                'is_sensitive' => 'boolean',
             ]);
 
             // Create the suggestion
@@ -213,6 +214,7 @@ class SuggestionController extends Controller
                 'answer' => $validatedData['answer'],
                 'situation_id' => $situation->id,
                 'user_id' => Auth::id(),
+                    'is_sensitive' => $request->is_sensitive ?? false,
             ]);
 
             // Handle the image upload if provided
@@ -359,6 +361,7 @@ class SuggestionController extends Controller
             'title' => 'sometimes|string|max:2000',
             'description' => 'sometimes|string',
             'image' => 'nullable|file|max:51200',
+            'is_sensitive' => 'boolean',
         ]);
 
         if ($validator->fails()) {
@@ -379,6 +382,7 @@ class SuggestionController extends Controller
         $suggestion->update([
             'answer' => $request->answer ?? $suggestion->answer,
             'legal_system'=>$request->legal_system ?? $suggestion->legal_system,
+            'is_sensitive' => $request->is_sensitive ?? $suggestion->is_sensitive,
         ]);
 
         if ($request->hasFile('image')) {
