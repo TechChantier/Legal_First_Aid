@@ -1,0 +1,1189 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: vsteuber@example.org
+                  nullable: false
+                password:
+                  type: string
+                  description: ''
+                  example: 'u$?Bc4'
+                  nullable: false
+              required:
+                - email
+                - password
+      security: []
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/situations/{situationId}/suggestions':
+    get:
+      summary: 'Get lawyer suggestions details.'
+      operationId: getLawyerSuggestionsDetails
+      description: 'Retrieve details of a lawyer suggestions by their ID.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  message: 'Suggestions successfully retrieved'
+                  data:
+                    -
+                      id: 20
+                      answer: 'This is not correct'
+                      image: null
+                      created_at: '2025-01-22T15:05:49.000000Z'
+                      lawyer:
+                        id: 3
+                        name: Sandra
+                        email: sandra@gmail.com
+                        image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                        matricule: 'bla bla bla'
+                      situation:
+                        id: 2
+                        title: 'Gate man was arrest'
+                        description: "He's am going through a lot"
+                        image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                        created_at: '2025-01-21T11:09:12.000000Z'
+                    -
+                      id: 21
+                      answer: 'This is not correct'
+                      image: null
+                      created_at: '2025-01-22T15:06:49.000000Z'
+                      lawyer:
+                        id: 3
+                        name: Sandra
+                        email: sandra@gmail.com
+                        image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                        matricule: 'bla bla bla'
+                      situation:
+                        id: 2
+                        title: 'Gate man was arrest'
+                        description: "He's am going through a lot"
+                        image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                        created_at: '2025-01-21T11:09:12.000000Z'
+                    -
+                      id: 23
+                      answer: 'Very wrong'
+                      image: null
+                      created_at: '2025-01-22T15:25:42.000000Z'
+                      lawyer:
+                        id: 3
+                        name: Sandra
+                        email: sandra@gmail.com
+                        image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                        matricule: 'bla bla bla'
+                      situation:
+                        id: 2
+                        title: 'Gate man was arrest'
+                        description: "He's am going through a lot"
+                        image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                        created_at: '2025-01-21T11:09:12.000000Z'
+                    -
+                      id: 25
+                      answer: 'No No No'
+                      image: null
+                      created_at: '2025-01-24T09:22:02.000000Z'
+                      lawyer:
+                        id: 3
+                        name: Sandra
+                        email: sandra@gmail.com
+                        image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                        matricule: 'bla bla bla'
+                      situation:
+                        id: 2
+                        title: 'Gate man was arrest'
+                        description: "He's am going through a lot"
+                        image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                        created_at: '2025-01-21T11:09:12.000000Z'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Suggestions successfully retrieved'
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 20
+                        answer: 'This is not correct'
+                        image: null
+                        created_at: '2025-01-22T15:05:49.000000Z'
+                        lawyer:
+                          id: 3
+                          name: Sandra
+                          email: sandra@gmail.com
+                          image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                          matricule: 'bla bla bla'
+                        situation:
+                          id: 2
+                          title: 'Gate man was arrest'
+                          description: "He's am going through a lot"
+                          image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                          created_at: '2025-01-21T11:09:12.000000Z'
+                      -
+                        id: 21
+                        answer: 'This is not correct'
+                        image: null
+                        created_at: '2025-01-22T15:06:49.000000Z'
+                        lawyer:
+                          id: 3
+                          name: Sandra
+                          email: sandra@gmail.com
+                          image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                          matricule: 'bla bla bla'
+                        situation:
+                          id: 2
+                          title: 'Gate man was arrest'
+                          description: "He's am going through a lot"
+                          image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                          created_at: '2025-01-21T11:09:12.000000Z'
+                      -
+                        id: 23
+                        answer: 'Very wrong'
+                        image: null
+                        created_at: '2025-01-22T15:25:42.000000Z'
+                        lawyer:
+                          id: 3
+                          name: Sandra
+                          email: sandra@gmail.com
+                          image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                          matricule: 'bla bla bla'
+                        situation:
+                          id: 2
+                          title: 'Gate man was arrest'
+                          description: "He's am going through a lot"
+                          image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                          created_at: '2025-01-21T11:09:12.000000Z'
+                      -
+                        id: 25
+                        answer: 'No No No'
+                        image: null
+                        created_at: '2025-01-24T09:22:02.000000Z'
+                        lawyer:
+                          id: 3
+                          name: Sandra
+                          email: sandra@gmail.com
+                          image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                          matricule: 'bla bla bla'
+                        situation:
+                          id: 2
+                          title: 'Gate man was arrest'
+                          description: "He's am going through a lot"
+                          image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                          created_at: '2025-01-21T11:09:12.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 20
+                        answer:
+                          type: string
+                          example: 'This is not correct'
+                        image:
+                          type: string
+                          example: null
+                        created_at:
+                          type: string
+                          example: '2025-01-22T15:05:49.000000Z'
+                        lawyer:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 3
+                            name:
+                              type: string
+                              example: Sandra
+                            email:
+                              type: string
+                              example: sandra@gmail.com
+                            image:
+                              type: string
+                              example: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                            matricule:
+                              type: string
+                              example: 'bla bla bla'
+                        situation:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 2
+                            title:
+                              type: string
+                              example: 'Gate man was arrest'
+                            description:
+                              type: string
+                              example: "He's am going through a lot"
+                            image:
+                              type: string
+                              example: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                            created_at:
+                              type: string
+                              example: '2025-01-21T11:09:12.000000Z'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Situation not found'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Situation not found'
+      tags:
+        - 'lawyer suggestions'
+      security: []
+    post:
+      summary: 'Get lawyer suggestions details.'
+      operationId: getLawyerSuggestionsDetails
+      description: 'Retrieve details of a lawyer suggestions by their ID.'
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    id: 25
+                    legal_system: common_law
+                    answer: 'No No No'
+                    image: null
+                    created_at: '2025-01-24T09:22:02.000000Z'
+                    lawyer:
+                      id: 3
+                      name: Sandra
+                      email: sandra@gmail.com
+                      image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                      matricule: 'bla bla bla'
+                    situation:
+                      id: 2
+                      title: 'Gate man was arrest'
+                      description: "He's am going through a lot"
+                      image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                      created_at: '2025-01-21T11:09:12.000000Z'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 25
+                      legal_system:
+                        type: string
+                        example: common_law
+                      answer:
+                        type: string
+                        example: 'No No No'
+                      image:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2025-01-24T09:22:02.000000Z'
+                      lawyer:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 3
+                          name:
+                            type: string
+                            example: Sandra
+                          email:
+                            type: string
+                            example: sandra@gmail.com
+                          image:
+                            type: string
+                            example: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                          matricule:
+                            type: string
+                            example: 'bla bla bla'
+                      situation:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 2
+                          title:
+                            type: string
+                            example: 'Gate man was arrest'
+                          description:
+                            type: string
+                            example: "He's am going through a lot"
+                          image:
+                            type: string
+                            example: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                          created_at:
+                            type: string
+                            example: '2025-01-21T11:09:12.000000Z'
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'lawyer suggestions'
+      security: []
+    parameters:
+      -
+        in: path
+        name: situationId
+        description: ''
+        example: modi
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the lawyer suggestions.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/suggestions/{id}':
+    get:
+      summary: 'Get lawyer suggestions details.'
+      operationId: getLawyerSuggestionsDetails
+      description: 'Retrieve details of a lawyer suggestions by their ID.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    id: 25
+                    answer: 'No No No'
+                    image: null
+                    created_at: '2025-01-24T09:22:02.000000Z'
+                    updated_at: '2025-01-24T09:22:02.000000Z'
+                    situation_id: 2
+                    user_id: 3
+                    situation:
+                      id: 2
+                      title: 'Gate man was arrest'
+                      description: "He's am going through a lot"
+                      image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                      created_at: '2025-01-21T11:09:12.000000Z'
+                      updated_at: '2025-01-21T11:09:12.000000Z'
+                      user_id: 2
+                    user:
+                      id: 3
+                      name: Sandra
+                      email: sandra@gmail.com
+                      email_verified_at: null
+                      matricule: 'bla bla bla'
+                      role: lawyer
+                      image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                      created_at: '2025-01-22T13:30:56.000000Z'
+                      updated_at: '2025-01-22T13:30:56.000000Z'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 25
+                      answer:
+                        type: string
+                        example: 'No No No'
+                      image:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2025-01-24T09:22:02.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2025-01-24T09:22:02.000000Z'
+                      situation_id:
+                        type: integer
+                        example: 2
+                      user_id:
+                        type: integer
+                        example: 3
+                      situation:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 2
+                          title:
+                            type: string
+                            example: 'Gate man was arrest'
+                          description:
+                            type: string
+                            example: "He's am going through a lot"
+                          image:
+                            type: string
+                            example: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                          created_at:
+                            type: string
+                            example: '2025-01-21T11:09:12.000000Z'
+                          updated_at:
+                            type: string
+                            example: '2025-01-21T11:09:12.000000Z'
+                          user_id:
+                            type: integer
+                            example: 2
+                      user:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 3
+                          name:
+                            type: string
+                            example: Sandra
+                          email:
+                            type: string
+                            example: sandra@gmail.com
+                          email_verified_at:
+                            type: string
+                            example: null
+                          matricule:
+                            type: string
+                            example: 'bla bla bla'
+                          role:
+                            type: string
+                            example: lawyer
+                          image:
+                            type: string
+                            example: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                          created_at:
+                            type: string
+                            example: '2025-01-22T13:30:56.000000Z'
+                          updated_at:
+                            type: string
+                            example: '2025-01-22T13:30:56.000000Z'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Suggestion not found'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Suggestion not found'
+      tags:
+        - 'lawyer suggestions'
+      security: []
+    put:
+      summary: 'Get lawyer suggestions details.'
+      operationId: getLawyerSuggestionsDetails
+      description: 'Retrieve details of a lawyer suggestions by their ID.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'suggestion updated successfully'
+                  data:
+                    id: 25
+                    answer: 'You have to go to call your lawyer'
+                    image: null
+                    created_at: '2025-01-24T09:22:02.000000Z'
+                    lawyer:
+                      id: 3
+                      name: Sandra
+                      email: sandra@gmail.com
+                      image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                      matricule: 'bla bla bla'
+                    situation:
+                      id: 2
+                      title: 'Gate man was arrest'
+                      description: "He's am going through a lot"
+                      image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                      created_at: '2025-01-21T11:09:12.000000Z'
+                properties:
+                  message:
+                    type: string
+                    example: 'suggestion updated successfully'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 25
+                      answer:
+                        type: string
+                        example: 'You have to go to call your lawyer'
+                      image:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2025-01-24T09:22:02.000000Z'
+                      lawyer:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 3
+                          name:
+                            type: string
+                            example: Sandra
+                          email:
+                            type: string
+                            example: sandra@gmail.com
+                          image:
+                            type: string
+                            example: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                          matricule:
+                            type: string
+                            example: 'bla bla bla'
+                      situation:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 2
+                          title:
+                            type: string
+                            example: 'Gate man was arrest'
+                          description:
+                            type: string
+                            example: "He's am going through a lot"
+                          image:
+                            type: string
+                            example: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                          created_at:
+                            type: string
+                            example: '2025-01-21T11:09:12.000000Z'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Suggestion not found'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Suggestion not found'
+      tags:
+        - 'lawyer suggestions'
+      requestBody:
+        required: false
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 2000 characters.'
+                  example: okhoeufzubpeucprtk
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: 'Occaecati ut natus culpa voluptas perferendis veritatis.'
+                  nullable: false
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 51200 kilobytes.'
+                  nullable: true
+                is_sensitive:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: false
+      security: []
+    delete:
+      summary: 'Get lawyer suggestions details.'
+      operationId: getLawyerSuggestionsDetails
+      description: 'Retrieve details of a lawyer suggestions by their ID.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Suggestion deleted successfully'
+                properties:
+                  message:
+                    type: string
+                    example: 'Suggestion deleted successfully'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Suggestion not found'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Suggestion not found'
+      tags:
+        - 'lawyer suggestions'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the lawyer suggestions.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/situations:
+    get:
+      summary: ''
+      operationId: getApiSituations
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    -
+                      id: 2
+                      title: 'Gate man was arrest'
+                      description: "He's am going through a lot"
+                      image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                      is_sensitive: 0
+                      created_at: '2025-01-21T11:09:12.000000Z'
+                    -
+                      id: 3
+                      title: 'Hello mimi lena'
+                      description: 'Call me when you can'
+                      image: /storage/images/YC2W1ITiioam6AfvVp0JScuZBXsunRJnLzeQTp4X.png
+                      is_sensitive: 0
+                      created_at: '2025-01-21T11:25:36.000000Z'
+                    -
+                      id: 4
+                      title: 'Does not go to school'
+                      description: "yes i don't"
+                      image: null
+                      is_sensitive: 0
+                      created_at: '2025-01-21T11:26:29.000000Z'
+                    -
+                      id: 5
+                      title: 'Had an arguement with the police'
+                      description: 'yes i dis'
+                      image: null
+                      is_sensitive: 0
+                      created_at: '2025-01-24T13:31:21.000000Z'
+                    -
+                      id: 6
+                      title: 'Had an arguement with the police'
+                      description: 'yes i dis'
+                      image: null
+                      is_sensitive: 0
+                      created_at: '2025-01-30T14:28:52.000000Z'
+                    -
+                      id: 8
+                      title: 'Had an arguement'
+                      description: 'yes'
+                      image: /storage/images/DKz9SKbi1Y80AjWWqkCJkTp9MtEGczwaNgdCiiEh.png
+                      is_sensitive: 0
+                      created_at: '2025-01-30T14:39:42.000000Z'
+                    -
+                      id: 9
+                      title: 'Had an arguement'
+                      description: 'yes'
+                      image: /storage/images/9BimUJSBcmMr1o0bctfYJ7fBK94WDbmCKajh936s.png
+                      is_sensitive: 1
+                      created_at: '2025-02-04T10:23:07.000000Z'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 2
+                        title: 'Gate man was arrest'
+                        description: "He's am going through a lot"
+                        image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                        is_sensitive: 0
+                        created_at: '2025-01-21T11:09:12.000000Z'
+                      -
+                        id: 3
+                        title: 'Hello mimi lena'
+                        description: 'Call me when you can'
+                        image: /storage/images/YC2W1ITiioam6AfvVp0JScuZBXsunRJnLzeQTp4X.png
+                        is_sensitive: 0
+                        created_at: '2025-01-21T11:25:36.000000Z'
+                      -
+                        id: 4
+                        title: 'Does not go to school'
+                        description: "yes i don't"
+                        image: null
+                        is_sensitive: 0
+                        created_at: '2025-01-21T11:26:29.000000Z'
+                      -
+                        id: 5
+                        title: 'Had an arguement with the police'
+                        description: 'yes i dis'
+                        image: null
+                        is_sensitive: 0
+                        created_at: '2025-01-24T13:31:21.000000Z'
+                      -
+                        id: 6
+                        title: 'Had an arguement with the police'
+                        description: 'yes i dis'
+                        image: null
+                        is_sensitive: 0
+                        created_at: '2025-01-30T14:28:52.000000Z'
+                      -
+                        id: 8
+                        title: 'Had an arguement'
+                        description: 'yes'
+                        image: /storage/images/DKz9SKbi1Y80AjWWqkCJkTp9MtEGczwaNgdCiiEh.png
+                        is_sensitive: 0
+                        created_at: '2025-01-30T14:39:42.000000Z'
+                      -
+                        id: 9
+                        title: 'Had an arguement'
+                        description: 'yes'
+                        image: /storage/images/9BimUJSBcmMr1o0bctfYJ7fBK94WDbmCKajh936s.png
+                        is_sensitive: 1
+                        created_at: '2025-02-04T10:23:07.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 2
+                        title:
+                          type: string
+                          example: 'Gate man was arrest'
+                        description:
+                          type: string
+                          example: "He's am going through a lot"
+                        image:
+                          type: string
+                          example: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                        is_sensitive:
+                          type: integer
+                          example: 0
+                        created_at:
+                          type: string
+                          example: '2025-01-21T11:09:12.000000Z'
+      tags:
+        - 'user suggestions'
+      security: []
+    post:
+      summary: 'Post user situation details.'
+      operationId: postUserSituationDetails
+      description: 'Retrieve details of a user suggestions by their ID.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Situation created successfully'
+                  data:
+                    id: 5
+                    title: 'Had an arguement with the police'
+                    description: 'yes i dis'
+                    image: null
+                    created_at: '2025-01-24T13:31:21.000000Z'
+                properties:
+                  message:
+                    type: string
+                    example: 'Situation created successfully'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 5
+                      title:
+                        type: string
+                        example: 'Had an arguement with the police'
+                      description:
+                        type: string
+                        example: 'yes i dis'
+                      image:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2025-01-24T13:31:21.000000Z'
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'user suggestions'
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 2000 characters.'
+                  example: miztgrumtlcqi
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: autem
+                  nullable: false
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 51200 kilobytes.'
+                  nullable: true
+                is_sensitive:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: false
+              required:
+                - title
+                - description
+      security: []
+  '/api/situations/{situationId}':
+    get:
+      summary: 'Get user situation details.'
+      operationId: getUserSituationDetails
+      description: 'Retrieve details of a situation suggestions by their ID.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"success\": true,\n\"data\": {\n\"data\": {\n   \"id\": 5,\n   \"title\": \"Had an arguement with the police\",\n   \"description\": \"yes i dis\",\n   \"image\": null,\n   \"created_at\": \"2025-01-24T13:31:21.000000Z\"\n}\n}"
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Situation not found'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Situation not found'
+      tags:
+        - 'user suggestions'
+      security: []
+    put:
+      summary: 'Put user situation details.'
+      operationId: putUserSituationDetails
+      description: 'Retrieve details of a user situation by their ID.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'suggestion updated successfully'
+                  data:
+                    id: 25
+                    answer: 'You have to go to call your lawyer'
+                    image: null
+                    created_at: '2025-01-24T09:22:02.000000Z'
+                    lawyer:
+                      id: 3
+                      name: Sandra
+                      email: sandra@gmail.com
+                      image: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                      matricule: 'bla bla bla'
+                    situation:
+                      id: 2
+                      title: 'Gate man was arrest'
+                      description: "He's am going through a lot"
+                      image: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                      created_at: '2025-01-21T11:09:12.000000Z'
+                properties:
+                  message:
+                    type: string
+                    example: 'suggestion updated successfully'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 25
+                      answer:
+                        type: string
+                        example: 'You have to go to call your lawyer'
+                      image:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2025-01-24T09:22:02.000000Z'
+                      lawyer:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 3
+                          name:
+                            type: string
+                            example: Sandra
+                          email:
+                            type: string
+                            example: sandra@gmail.com
+                          image:
+                            type: string
+                            example: /storage/images/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg
+                          matricule:
+                            type: string
+                            example: 'bla bla bla'
+                      situation:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 2
+                          title:
+                            type: string
+                            example: 'Gate man was arrest'
+                          description:
+                            type: string
+                            example: "He's am going through a lot"
+                          image:
+                            type: string
+                            example: /storage/images/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png
+                          created_at:
+                            type: string
+                            example: '2025-01-21T11:09:12.000000Z'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Suggestion not found'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Suggestion not found'
+      tags:
+        - 'user suggestions'
+      requestBody:
+        required: false
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 2000 characters.'
+                  example: aziufhxzvij
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: null
+                  nullable: false
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 51200 kilobytes.'
+                  nullable: true
+                is_sensitive:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: false
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiSituationsSituationId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'user suggestions'
+      security: []
+    parameters:
+      -
+        in: path
+        name: situationId
+        description: ''
+        example: 2
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: id
+        description: 'The ID of the situation suggestions.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: 'lawyer suggestions'
+    description: "\nEndpoints related to lawyer suggestions management."
+  -
+    name: 'user suggestions'
+    description: "\nEndpoints related to user situations management."

@@ -1,0 +1,760 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "12091725-2174-4cfa-8fef-ce91b8ee53a3",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"vsteuber@example.org\",\"password\":\"u$?Bc4\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "lawyer suggestions",
+            "description": "\nEndpoints related to lawyer suggestions management.",
+            "item": [
+                {
+                    "name": "Get lawyer suggestions details.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/situations\/:situationId\/suggestions",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/situations\/:situationId\/suggestions",
+                            "variable": [
+                                {
+                                    "id": "situationId",
+                                    "key": "situationId",
+                                    "value": "modi",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the lawyer suggestions."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retrieve details of a lawyer suggestions by their ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"success\": true,\n\"message\": \"Suggestions successfully retrieved\",\n\"data\": [\n    {\n        \"id\": 20,\n        \"answer\": \"This is not correct\",\n        \"image\": null,\n        \"created_at\": \"2025-01-22T15:05:49.000000Z\",\n        \"lawyer\": {\n            \"id\": 3,\n            \"name\": \"Sandra\",\n            \"email\": \"sandra@gmail.com\",\n            \"image\": \"\/storage\/images\/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg\",\n            \"matricule\": \"bla bla bla\"\n        },\n        \"situation\": {\n            \"id\": 2,\n            \"title\": \"Gate man was arrest\",\n            \"description\": \"He's am going through a lot\",\n            \"image\": \"\/storage\/images\/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png\",\n            \"created_at\": \"2025-01-21T11:09:12.000000Z\"\n        }\n    },\n    {\n        \"id\": 21,\n        \"answer\": \"This is not correct\",\n        \"image\": null,\n        \"created_at\": \"2025-01-22T15:06:49.000000Z\",\n        \"lawyer\": {\n            \"id\": 3,\n            \"name\": \"Sandra\",\n            \"email\": \"sandra@gmail.com\",\n            \"image\": \"\/storage\/images\/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg\",\n            \"matricule\": \"bla bla bla\"\n        },\n        \"situation\": {\n            \"id\": 2,\n            \"title\": \"Gate man was arrest\",\n            \"description\": \"He's am going through a lot\",\n            \"image\": \"\/storage\/images\/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png\",\n            \"created_at\": \"2025-01-21T11:09:12.000000Z\"\n        }\n    },\n    {\n        \"id\": 23,\n        \"answer\": \"Very wrong\",\n        \"image\": null,\n        \"created_at\": \"2025-01-22T15:25:42.000000Z\",\n        \"lawyer\": {\n            \"id\": 3,\n            \"name\": \"Sandra\",\n            \"email\": \"sandra@gmail.com\",\n            \"image\": \"\/storage\/images\/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg\",\n            \"matricule\": \"bla bla bla\"\n        },\n        \"situation\": {\n            \"id\": 2,\n            \"title\": \"Gate man was arrest\",\n            \"description\": \"He's am going through a lot\",\n            \"image\": \"\/storage\/images\/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png\",\n            \"created_at\": \"2025-01-21T11:09:12.000000Z\"\n        }\n    },\n    {\n        \"id\": 25,\n        \"answer\": \"No No No\",\n        \"image\": null,\n        \"created_at\": \"2025-01-24T09:22:02.000000Z\",\n        \"lawyer\": {\n            \"id\": 3,\n            \"name\": \"Sandra\",\n            \"email\": \"sandra@gmail.com\",\n            \"image\": \"\/storage\/images\/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg\",\n            \"matricule\": \"bla bla bla\"\n        },\n        \"situation\": {\n            \"id\": 2,\n            \"title\": \"Gate man was arrest\",\n            \"description\": \"He's am going through a lot\",\n            \"image\": \"\/storage\/images\/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png\",\n            \"created_at\": \"2025-01-21T11:09:12.000000Z\"\n        }\n    }\n]\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"success\": false,\n\"message\": \"Situation not found\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get lawyer suggestions details.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/situations\/:situationId\/suggestions",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/situations\/:situationId\/suggestions",
+                            "variable": [
+                                {
+                                    "id": "situationId",
+                                    "key": "situationId",
+                                    "value": "consequuntur",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the lawyer suggestions."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retrieve details of a lawyer suggestions by their ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n \"success\": true,\n\"data\": {\n    \"id\": 25,\n\"legal_system\": \"common_law\",\n   \"answer\": \"No No No\",\n    \"image\": null,\n    \"created_at\": \"2025-01-24T09:22:02.000000Z\",\n   \"lawyer\": {\n      \"id\": 3,\n      \"name\": \"Sandra\",\n      \"email\": \"sandra@gmail.com\",\n     \"image\": \"\/storage\/images\/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg\",\n    \"matricule\": \"bla bla bla\"\n},\n\"situation\": {\n   \"id\": 2,\n   \"title\": \"Gate man was arrest\",\n   \"description\": \"He's am going through a lot\",\n  \"image\": \"\/storage\/images\/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png\",\n  \"created_at\": \"2025-01-21T11:09:12.000000Z\"\n }\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get lawyer suggestions details.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/suggestions\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/suggestions\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the lawyer suggestions."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retrieve details of a lawyer suggestions by their ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"success\": true,\n\"data\": {\n   \"id\": 25,\n   \"answer\": \"No No No\",\n   \"image\": null,\n   \"created_at\": \"2025-01-24T09:22:02.000000Z\",\n   \"updated_at\": \"2025-01-24T09:22:02.000000Z\",\n   \"situation_id\": 2,\n   \"user_id\": 3,\n   \"situation\": {\n       \"id\": 2,\n       \"title\": \"Gate man was arrest\",\n       \"description\": \"He's am going through a lot\",\n       \"image\": \"\/storage\/images\/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png\",\n       \"created_at\": \"2025-01-21T11:09:12.000000Z\",\n       \"updated_at\": \"2025-01-21T11:09:12.000000Z\",\n       \"user_id\": 2\n   },\n   \"user\": {\n       \"id\": 3,\n       \"name\": \"Sandra\",\n       \"email\": \"sandra@gmail.com\",\n       \"email_verified_at\": null,\n       \"matricule\": \"bla bla bla\",\n       \"role\": \"lawyer\",\n       \"image\": \"\/storage\/images\/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg\",\n       \"created_at\": \"2025-01-22T13:30:56.000000Z\",\n       \"updated_at\": \"2025-01-22T13:30:56.000000Z\"\n   }\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"success\": false,\n\"message\": \"Suggestion not found\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get lawyer suggestions details.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/suggestions\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/suggestions\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the lawyer suggestions."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "title",
+                                    "value": "okhoeufzubpeucprtk",
+                                    "type": "text",
+                                    "description": "Must not be greater than 2000 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "Occaecati ut natus culpa voluptas perferendis veritatis.",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "is_sensitive",
+                                    "value": "",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "_method",
+                                    "value": "PUT",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "description": "Retrieve details of a lawyer suggestions by their ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"suggestion updated successfully\",\n\"data\": {\n   \"id\": 25,\n   \"answer\": \"You have to go to call your lawyer\",\n   \"image\": null,\n   \"created_at\": \"2025-01-24T09:22:02.000000Z\",\n   \"lawyer\": {\n       \"id\": 3,\n       \"name\": \"Sandra\",\n       \"email\": \"sandra@gmail.com\",\n       \"image\": \"\/storage\/images\/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg\",\n       \"matricule\": \"bla bla bla\"\n   },\n   \"situation\": {\n       \"id\": 2,\n       \"title\": \"Gate man was arrest\",\n       \"description\": \"He's am going through a lot\",\n       \"image\": \"\/storage\/images\/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png\",\n       \"created_at\": \"2025-01-21T11:09:12.000000Z\"\n   }\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"success\": false,\n\"message\": \"Suggestion not found\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get lawyer suggestions details.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/suggestions\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/suggestions\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the lawyer suggestions."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retrieve details of a lawyer suggestions by their ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Suggestion deleted successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"success\": false,\n\"message\": \"Suggestion not found\"\n}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "user suggestions",
+            "description": "\nEndpoints related to user situations management.",
+            "item": [
+                {
+                    "name": "GET api\/situations",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/situations",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/situations"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"success\":true,\"data\":[{\"id\":2,\"title\":\"Gate man was arrest\",\"description\":\"He's am going through a lot\",\"image\":\"\\\/storage\\\/images\\\/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png\",\"is_sensitive\":0,\"created_at\":\"2025-01-21T11:09:12.000000Z\"},{\"id\":3,\"title\":\"Hello mimi lena\",\"description\":\"Call me when you can\",\"image\":\"\\\/storage\\\/images\\\/YC2W1ITiioam6AfvVp0JScuZBXsunRJnLzeQTp4X.png\",\"is_sensitive\":0,\"created_at\":\"2025-01-21T11:25:36.000000Z\"},{\"id\":4,\"title\":\"Does not go to school\",\"description\":\"yes i don't\",\"image\":null,\"is_sensitive\":0,\"created_at\":\"2025-01-21T11:26:29.000000Z\"},{\"id\":5,\"title\":\"Had an arguement with the police\",\"description\":\"yes i dis\",\"image\":null,\"is_sensitive\":0,\"created_at\":\"2025-01-24T13:31:21.000000Z\"},{\"id\":6,\"title\":\"Had an arguement with the police\",\"description\":\"yes i dis\",\"image\":null,\"is_sensitive\":0,\"created_at\":\"2025-01-30T14:28:52.000000Z\"},{\"id\":8,\"title\":\"Had an arguement\",\"description\":\"yes\",\"image\":\"\\\/storage\\\/images\\\/DKz9SKbi1Y80AjWWqkCJkTp9MtEGczwaNgdCiiEh.png\",\"is_sensitive\":0,\"created_at\":\"2025-01-30T14:39:42.000000Z\"},{\"id\":9,\"title\":\"Had an arguement\",\"description\":\"yes\",\"image\":\"\\\/storage\\\/images\\\/9BimUJSBcmMr1o0bctfYJ7fBK94WDbmCKajh936s.png\",\"is_sensitive\":1,\"created_at\":\"2025-02-04T10:23:07.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Post user situation details.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/situations",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/situations",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user suggestions."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "title",
+                                    "value": "miztgrumtlcqi",
+                                    "type": "text",
+                                    "description": "Must not be greater than 2000 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "autem",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "is_sensitive",
+                                    "value": "",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "Retrieve details of a user suggestions by their ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Situation created successfully\",\n\"data\": {\n   \"id\": 5,\n   \"title\": \"Had an arguement with the police\",\n   \"description\": \"yes i dis\",\n   \"image\": null,\n   \"created_at\": \"2025-01-24T13:31:21.000000Z\"\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get user situation details.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/situations\/:situationId",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/situations\/:situationId",
+                            "variable": [
+                                {
+                                    "id": "situationId",
+                                    "key": "situationId",
+                                    "value": "2",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the situation suggestions."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retrieve details of a situation suggestions by their ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"success\": true,\n\"data\": {\n\"data\": {\n   \"id\": 5,\n   \"title\": \"Had an arguement with the police\",\n   \"description\": \"yes i dis\",\n   \"image\": null,\n   \"created_at\": \"2025-01-24T13:31:21.000000Z\"\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"success\": false,\n\"message\": \"Situation not found\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Put user situation details.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/situations\/:situationId",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/situations\/:situationId",
+                            "variable": [
+                                {
+                                    "id": "situationId",
+                                    "key": "situationId",
+                                    "value": "2",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user situation."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "title",
+                                    "value": "aziufhxzvij",
+                                    "type": "text",
+                                    "description": "Must not be greater than 2000 characters."
+                                },
+                                {
+                                    "key": "is_sensitive",
+                                    "value": "",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "_method",
+                                    "value": "PUT",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "description": "Retrieve details of a user situation by their ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"suggestion updated successfully\",\n\"data\": {\n   \"id\": 25,\n   \"answer\": \"You have to go to call your lawyer\",\n   \"image\": null,\n   \"created_at\": \"2025-01-24T09:22:02.000000Z\",\n   \"lawyer\": {\n       \"id\": 3,\n       \"name\": \"Sandra\",\n       \"email\": \"sandra@gmail.com\",\n       \"image\": \"\/storage\/images\/LPu4h7nOiKV7qvnlWsB1z0HJa4B7ofgHwymtAiHY.jpg\",\n       \"matricule\": \"bla bla bla\"\n   },\n   \"situation\": {\n       \"id\": 2,\n       \"title\": \"Gate man was arrest\",\n       \"description\": \"He's am going through a lot\",\n       \"image\": \"\/storage\/images\/sHNcE5cszEFpEYu770KvndsYVtYqSV8biQDgvB0Y.png\",\n       \"created_at\": \"2025-01-21T11:09:12.000000Z\"\n   }\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"success\": false,\n\"message\": \"Suggestion not found\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "DELETE api\/situations\/{situationId}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/situations\/:situationId",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/situations\/:situationId",
+                            "variable": [
+                                {
+                                    "id": "situationId",
+                                    "key": "situationId",
+                                    "value": "2",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
