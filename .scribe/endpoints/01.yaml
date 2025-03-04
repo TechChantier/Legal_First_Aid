@@ -26,7 +26,7 @@ endpoints:
         name: situationId
         description: ''
         required: true
-        example: modi
+        example: voluptas
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -43,7 +43,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      situationId: modi
+      situationId: voluptas
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -182,7 +182,7 @@ endpoints:
         name: situationId
         description: ''
         required: true
-        example: consequuntur
+        example: laboriosam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -199,7 +199,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      situationId: consequuntur
+      situationId: laboriosam
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -381,7 +381,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 2000 characters.'
         required: false
-        example: okhoeufzubpeucprtk
+        example: hrfbhwiscbwfqexangpmp
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -391,7 +391,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Occaecati ut natus culpa voluptas perferendis veritatis.'
+        example: 'Tenetur voluptatem doloribus magni qui.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -418,8 +418,8 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      title: okhoeufzubpeucprtk
-      description: 'Occaecati ut natus culpa voluptas perferendis veritatis.'
+      title: hrfbhwiscbwfqexangpmp
+      description: 'Tenetur voluptatem doloribus magni qui.'
       is_sensitive: false
     fileParameters:
       image: null

@@ -138,7 +138,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 15, 2025</li>
+        <li>Last updated: March 4, 2025</li>
     </ul>
 </div>
 
@@ -409,8 +409,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"vsteuber@example.org\",
-    \"password\": \"u$?Bc4\"
+    \"email\": \"pupton@example.com\",
+    \"password\": \"K?STHe4G~&gt;\"
 }"
 </code></pre></div>
 
@@ -426,8 +426,8 @@ const headers = {
 };
 
 let body = {
-    "email": "vsteuber@example.org",
-    "password": "u$?Bc4"
+    "email": "pupton@example.com",
+    "password": "K?STHe4G~&gt;"
 };
 
 fetch(url, {
@@ -516,10 +516,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login"
-               value="vsteuber@example.org"
+               value="pupton@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>vsteuber@example.org</code></p>
+<p>Must be a valid email address. Example: <code>pupton@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -527,10 +527,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login"
-               value="u$?Bc4"
+               value="K?STHe4G~>"
                data-component="body">
     <br>
-<p>Example: <code>u$?Bc4</code></p>
+<p>Example: <code>K?STHe4G~&gt;</code></p>
         </div>
         </form>
 
@@ -659,14 +659,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/situations/modi/suggestions" \
+    --get "http://localhost/api/situations/voluptas/suggestions" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/situations/modi/suggestions"
+    "http://localhost/api/situations/voluptas/suggestions"
 );
 
 const headers = {
@@ -861,10 +861,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="situationId"                data-endpoint="GETapi-situations--situationId--suggestions"
-               value="modi"
+               value="voluptas"
                data-component="url">
     <br>
-<p>Example: <code>modi</code></p>
+<p>Example: <code>voluptas</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -892,14 +892,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/situations/consequuntur/suggestions" \
+    "http://localhost/api/situations/laboriosam/suggestions" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/situations/consequuntur/suggestions"
+    "http://localhost/api/situations/laboriosam/suggestions"
 );
 
 const headers = {
@@ -1031,10 +1031,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="situationId"                data-endpoint="POSTapi-situations--situationId--suggestions"
-               value="consequuntur"
+               value="laboriosam"
                data-component="url">
     <br>
-<p>Example: <code>consequuntur</code></p>
+<p>Example: <code>laboriosam</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -1233,10 +1233,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost/api/suggestions/1" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=okhoeufzubpeucprtk"\
-    --form "description=Occaecati ut natus culpa voluptas perferendis veritatis."\
+    --form "title=hrfbhwiscbwfqexangpmp"\
+    --form "description=Tenetur voluptatem doloribus magni qui."\
     --form "is_sensitive="\
-    --form "image=@C:\Users\Salome\AppData\Local\Temp\phpA875.tmp" </code></pre></div>
+    --form "image=@C:\Users\Salome\AppData\Local\Temp\php5A86.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1250,8 +1250,8 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'okhoeufzubpeucprtk');
-body.append('description', 'Occaecati ut natus culpa voluptas perferendis veritatis.');
+body.append('title', 'hrfbhwiscbwfqexangpmp');
+body.append('description', 'Tenetur voluptatem doloribus magni qui.');
 body.append('is_sensitive', '');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
@@ -1392,10 +1392,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-suggestions--id-"
-               value="okhoeufzubpeucprtk"
+               value="hrfbhwiscbwfqexangpmp"
                data-component="body">
     <br>
-<p>Must not be greater than 2000 characters. Example: <code>okhoeufzubpeucprtk</code></p>
+<p>Must not be greater than 2000 characters. Example: <code>hrfbhwiscbwfqexangpmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1403,10 +1403,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-suggestions--id-"
-               value="Occaecati ut natus culpa voluptas perferendis veritatis."
+               value="Tenetur voluptatem doloribus magni qui."
                data-component="body">
     <br>
-<p>Example: <code>Occaecati ut natus culpa voluptas perferendis veritatis.</code></p>
+<p>Example: <code>Tenetur voluptatem doloribus magni qui.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -1417,7 +1417,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\phpA875.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\php5A86.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_sensitive</code></b>&nbsp;&nbsp;
@@ -1783,10 +1783,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost/api/situations" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=miztgrumtlcqi"\
-    --form "description=autem"\
+    --form "title=fxji"\
+    --form "description=doloremque"\
     --form "is_sensitive="\
-    --form "image=@C:\Users\Salome\AppData\Local\Temp\phpA8F3.tmp" </code></pre></div>
+    --form "image=@C:\Users\Salome\AppData\Local\Temp\php5B04.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1800,8 +1800,8 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'miztgrumtlcqi');
-body.append('description', 'autem');
+body.append('title', 'fxji');
+body.append('description', 'doloremque');
 body.append('is_sensitive', '');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
@@ -1928,10 +1928,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-situations"
-               value="miztgrumtlcqi"
+               value="fxji"
                data-component="body">
     <br>
-<p>Must not be greater than 2000 characters. Example: <code>miztgrumtlcqi</code></p>
+<p>Must not be greater than 2000 characters. Example: <code>fxji</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1939,10 +1939,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-situations"
-               value="autem"
+               value="doloremque"
                data-component="body">
     <br>
-<p>Example: <code>autem</code></p>
+<p>Example: <code>doloremque</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -1953,7 +1953,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\phpA8F3.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\php5B04.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_sensitive</code></b>&nbsp;&nbsp;
@@ -2152,9 +2152,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost/api/situations/2" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=aziufhxzvij"\
-    --form "is_sensitive="\
-    --form "image=@C:\Users\Salome\AppData\Local\Temp\phpA913.tmp" </code></pre></div>
+    --form "title=jjyicufgpgkqxnrvndklsns"\
+    --form "is_sensitive=1"\
+    --form "image=@C:\Users\Salome\AppData\Local\Temp\php5B24.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2168,8 +2168,8 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'aziufhxzvij');
-body.append('is_sensitive', '');
+body.append('title', 'jjyicufgpgkqxnrvndklsns');
+body.append('is_sensitive', '1');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -2324,10 +2324,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-situations--situationId-"
-               value="aziufhxzvij"
+               value="jjyicufgpgkqxnrvndklsns"
                data-component="body">
     <br>
-<p>Must not be greater than 2000 characters. Example: <code>aziufhxzvij</code></p>
+<p>Must not be greater than 2000 characters. Example: <code>jjyicufgpgkqxnrvndklsns</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -2349,7 +2349,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\phpA913.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\php5B24.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_sensitive</code></b>&nbsp;&nbsp;
@@ -2370,7 +2370,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
         </form>
 

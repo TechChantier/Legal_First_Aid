@@ -11,7 +11,7 @@ return [
 
     // The base URL displayed in the docs. If this is empty, Scribe will use the value of config('app.url') at generation time.
     // If you're using `laravel` type, you can set this to a dynamic string, like '{{ config("app.tenant_url") }}' to get a dynamic base URL.
-    'base_url' => 'https://rrn24.techchantier.site/Legal_First_Aid/public/',
+    'base_url' => "https://rrn24.techchantier.site/Legal_First_Aid/public/api",
 
     'routes' => [
         [
@@ -74,7 +74,7 @@ return [
     ],
 
     'external' => [
-        'html_attributes' => [],
+        'html_attributes' => []
     ],
 
     'try_it_out' => [
@@ -122,7 +122,7 @@ return [
     ],
 
     // Text to place in the "Introduction" section, right after the `description`. Markdown and HTML are supported.
-    'intro_text' => <<<'INTRO'
+    'intro_text' => <<<INTRO
 This documentation aims to provide all the information you need to work with our API.
 
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -224,8 +224,8 @@ INTRO
                 [
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json',
-                ],
-            ],
+                ]
+            ]
         ],
         'bodyParameters' => [
             Strategies\BodyParameters\GetFromFormRequest::class,
@@ -247,8 +247,8 @@ INTRO
                     'config' => [
                         'app.debug' => false,
                     ],
-                ],
-            ],
+                ]
+            ]
         ],
         'responseFields' => [
             Strategies\ResponseFields\GetFromResponseFieldAttribute::class,

@@ -58,12 +58,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: vsteuber@example.org
+                  example: pupton@example.com
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: 'u$?Bc4'
+                  example: 'K?STHe4G~>'
                   nullable: false
               required:
                 - email
@@ -422,7 +422,7 @@ paths:
         in: path
         name: situationId
         description: ''
-        example: modi
+        example: voluptas
         required: true
         schema:
           type: string
@@ -690,12 +690,12 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 2000 characters.'
-                  example: okhoeufzubpeucprtk
+                  example: hrfbhwiscbwfqexangpmp
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Occaecati ut natus culpa voluptas perferendis veritatis.'
+                  example: 'Tenetur voluptatem doloribus magni qui.'
                   nullable: false
                 image:
                   type: string
@@ -965,12 +965,12 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 2000 characters.'
-                  example: miztgrumtlcqi
+                  example: fxji
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: autem
+                  example: doloremque
                   nullable: false
                 image:
                   type: string
@@ -1133,7 +1133,7 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 2000 characters.'
-                  example: aziufhxzvij
+                  example: jjyicufgpgkqxnrvndklsns
                   nullable: false
                 description:
                   type: string
@@ -1148,7 +1148,7 @@ paths:
                 is_sensitive:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: false
       security: []
     delete:
