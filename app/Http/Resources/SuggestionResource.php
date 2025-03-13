@@ -22,7 +22,7 @@ class SuggestionResource extends JsonResource
             'is_sensitive' => $this->is_sensitive,
             'created_at' => $this->created_at,
             'lawyer' => new UserResource($this->whenLoaded('user')),
-            'situation' => new SituationResource($this->whenLoaded(['situation', 'user'])),
+            'situation' => new SituationResource($this->whenLoaded('situation')),
 
         ];
     }
