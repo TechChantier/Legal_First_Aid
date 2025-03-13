@@ -84,7 +84,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 2000 characters.'
         required: true
-        example: fxji
+        example: cdxaupdlgrs
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -94,7 +94,7 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: doloremque
+        example: consectetur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -121,8 +121,8 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      title: fxji
-      description: doloremque
+      title: cdxaupdlgrs
+      description: consectetur
       is_sensitive: false
     fileParameters:
       image: null
@@ -289,7 +289,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 2000 characters.'
         required: false
-        example: jjyicufgpgkqxnrvndklsns
+        example: sdoswi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -326,7 +326,7 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      title: jjyicufgpgkqxnrvndklsns
+      title: sdoswi
       is_sensitive: true
     fileParameters:
       image: null

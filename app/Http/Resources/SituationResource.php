@@ -21,6 +21,7 @@ class SituationResource extends JsonResource
             'image' => $this->image,
             'is_sensitive' => $this->is_sensitive,
             'created_at' => $this->created_at,
+            'created_by' => new UserResource($this->whenLoaded('user')),
         ];
     }
 }

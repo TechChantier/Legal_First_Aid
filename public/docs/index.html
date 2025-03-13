@@ -147,7 +147,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost</code>
+    <strong>Base URL</strong>: <code>https://rrn24.techchantier.site/Legal_First_Aid/public/api</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -173,14 +173,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/user" \
+    --get "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/user" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/user"
 );
 
 const headers = {
@@ -297,14 +297,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/register" \
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/register"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/register"
 );
 
 const headers = {
@@ -405,19 +405,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/login" \
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"pupton@example.com\",
-    \"password\": \"K?STHe4G~&gt;\"
+    \"email\": \"gerhold.camila@example.net\",
+    \"password\": \"]C:{]&lt;8jF31i|\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/login"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/login"
 );
 
 const headers = {
@@ -426,8 +426,8 @@ const headers = {
 };
 
 let body = {
-    "email": "pupton@example.com",
-    "password": "K?STHe4G~&gt;"
+    "email": "gerhold.camila@example.net",
+    "password": "]C:{]&lt;8jF31i|"
 };
 
 fetch(url, {
@@ -516,10 +516,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login"
-               value="pupton@example.com"
+               value="gerhold.camila@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>pupton@example.com</code></p>
+<p>Must be a valid email address. Example: <code>gerhold.camila@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -527,10 +527,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login"
-               value="K?STHe4G~>"
+               value="]C:{]<8jF31i|"
                data-component="body">
     <br>
-<p>Example: <code>K?STHe4G~&gt;</code></p>
+<p>Example: <code>]C:{]&lt;8jF31i|</code></p>
         </div>
         </form>
 
@@ -547,14 +547,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/logout" \
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/logout" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/logout"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/logout"
 );
 
 const headers = {
@@ -659,14 +659,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/situations/voluptas/suggestions" \
+    --get "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations/velit/suggestions" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/situations/voluptas/suggestions"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations/velit/suggestions"
 );
 
 const headers = {
@@ -861,10 +861,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="situationId"                data-endpoint="GETapi-situations--situationId--suggestions"
-               value="voluptas"
+               value="velit"
                data-component="url">
     <br>
-<p>Example: <code>voluptas</code></p>
+<p>Example: <code>velit</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -892,14 +892,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/situations/laboriosam/suggestions" \
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations/corrupti/suggestions" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/situations/laboriosam/suggestions"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations/corrupti/suggestions"
 );
 
 const headers = {
@@ -1031,10 +1031,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="situationId"                data-endpoint="POSTapi-situations--situationId--suggestions"
-               value="laboriosam"
+               value="corrupti"
                data-component="url">
     <br>
-<p>Example: <code>laboriosam</code></p>
+<p>Example: <code>corrupti</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -1062,14 +1062,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/suggestions/1" \
+    --get "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/suggestions/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/suggestions/1"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/suggestions/1"
 );
 
 const headers = {
@@ -1230,18 +1230,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/suggestions/1" \
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/suggestions/1" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=hrfbhwiscbwfqexangpmp"\
-    --form "description=Tenetur voluptatem doloribus magni qui."\
+    --form "title=bkmqrkygifwpnpjurmx"\
+    --form "description=Et est impedit necessitatibus atque perspiciatis nemo corrupti."\
     --form "is_sensitive="\
-    --form "image=@C:\Users\Salome\AppData\Local\Temp\php5A86.tmp" </code></pre></div>
+    --form "image=@C:\Users\Salome\AppData\Local\Temp\phpC84.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/suggestions/1"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/suggestions/1"
 );
 
 const headers = {
@@ -1250,8 +1250,8 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'hrfbhwiscbwfqexangpmp');
-body.append('description', 'Tenetur voluptatem doloribus magni qui.');
+body.append('title', 'bkmqrkygifwpnpjurmx');
+body.append('description', 'Et est impedit necessitatibus atque perspiciatis nemo corrupti.');
 body.append('is_sensitive', '');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
@@ -1392,10 +1392,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-suggestions--id-"
-               value="hrfbhwiscbwfqexangpmp"
+               value="bkmqrkygifwpnpjurmx"
                data-component="body">
     <br>
-<p>Must not be greater than 2000 characters. Example: <code>hrfbhwiscbwfqexangpmp</code></p>
+<p>Must not be greater than 2000 characters. Example: <code>bkmqrkygifwpnpjurmx</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1403,10 +1403,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-suggestions--id-"
-               value="Tenetur voluptatem doloribus magni qui."
+               value="Et est impedit necessitatibus atque perspiciatis nemo corrupti."
                data-component="body">
     <br>
-<p>Example: <code>Tenetur voluptatem doloribus magni qui.</code></p>
+<p>Example: <code>Et est impedit necessitatibus atque perspiciatis nemo corrupti.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -1417,7 +1417,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\php5A86.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\phpC84.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_sensitive</code></b>&nbsp;&nbsp;
@@ -1455,14 +1455,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/suggestions/1" \
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/suggestions/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/suggestions/1"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/suggestions/1"
 );
 
 const headers = {
@@ -1598,14 +1598,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/situations" \
+    --get "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/situations"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations"
 );
 
 const headers = {
@@ -1780,18 +1780,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/situations" \
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=fxji"\
-    --form "description=doloremque"\
+    --form "title=cdxaupdlgrs"\
+    --form "description=consectetur"\
     --form "is_sensitive="\
-    --form "image=@C:\Users\Salome\AppData\Local\Temp\php5B04.tmp" </code></pre></div>
+    --form "image=@C:\Users\Salome\AppData\Local\Temp\phpD02.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/situations"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations"
 );
 
 const headers = {
@@ -1800,8 +1800,8 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'fxji');
-body.append('description', 'doloremque');
+body.append('title', 'cdxaupdlgrs');
+body.append('description', 'consectetur');
 body.append('is_sensitive', '');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
@@ -1928,10 +1928,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-situations"
-               value="fxji"
+               value="cdxaupdlgrs"
                data-component="body">
     <br>
-<p>Must not be greater than 2000 characters. Example: <code>fxji</code></p>
+<p>Must not be greater than 2000 characters. Example: <code>cdxaupdlgrs</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1939,10 +1939,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-situations"
-               value="doloremque"
+               value="consectetur"
                data-component="body">
     <br>
-<p>Example: <code>doloremque</code></p>
+<p>Example: <code>consectetur</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -1953,7 +1953,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\php5B04.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\phpD02.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_sensitive</code></b>&nbsp;&nbsp;
@@ -1991,14 +1991,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/situations/2" \
+    --get "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/situations/2"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations/2"
 );
 
 const headers = {
@@ -2149,17 +2149,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/situations/2" \
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations/2" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=jjyicufgpgkqxnrvndklsns"\
+    --form "title=sdoswi"\
     --form "is_sensitive=1"\
-    --form "image=@C:\Users\Salome\AppData\Local\Temp\php5B24.tmp" </code></pre></div>
+    --form "image=@C:\Users\Salome\AppData\Local\Temp\phpD12.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/situations/2"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations/2"
 );
 
 const headers = {
@@ -2168,7 +2168,7 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'jjyicufgpgkqxnrvndklsns');
+body.append('title', 'sdoswi');
 body.append('is_sensitive', '1');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
@@ -2324,10 +2324,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-situations--situationId-"
-               value="jjyicufgpgkqxnrvndklsns"
+               value="sdoswi"
                data-component="body">
     <br>
-<p>Must not be greater than 2000 characters. Example: <code>jjyicufgpgkqxnrvndklsns</code></p>
+<p>Must not be greater than 2000 characters. Example: <code>sdoswi</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -2349,7 +2349,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\php5B24.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\Salome\AppData\Local\Temp\phpD12.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_sensitive</code></b>&nbsp;&nbsp;
@@ -2387,14 +2387,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/situations/2" \
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/situations/2"
+    "https://rrn24.techchantier.site/Legal_First_Aid/public/api/api/situations/2"
 );
 
 const headers = {

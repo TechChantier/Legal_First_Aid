@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "http:\/\/localhost"
+            "value": "https:\/\/rrn24.techchantier.site\/Legal_First_Aid\/public\/api"
         }
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "67f21673-5326-4a0b-b7a1-d0f6487fbc1d",
+        "_postman_id": "242b79e8-e1c7-466a-acb1-1ebef5bbc2f1",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -117,7 +117,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"pupton@example.com\",\"password\":\"K?STHe4G~>\"}"
+                            "raw": "{\"email\":\"gerhold.camila@example.net\",\"password\":\"]C:{]<8jF31i|\"}"
                         },
                         "description": "",
                         "auth": {
@@ -172,7 +172,7 @@
                                 {
                                     "id": "situationId",
                                     "key": "situationId",
-                                    "value": "voluptas",
+                                    "value": "velit",
                                     "description": ""
                                 },
                                 {
@@ -227,7 +227,7 @@
                                 {
                                     "id": "situationId",
                                     "key": "situationId",
-                                    "value": "laboriosam",
+                                    "value": "corrupti",
                                     "description": ""
                                 },
                                 {
@@ -352,13 +352,13 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "hrfbhwiscbwfqexangpmp",
+                                    "value": "bkmqrkygifwpnpjurmx",
                                     "type": "text",
                                     "description": "Must not be greater than 2000 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Tenetur voluptatem doloribus magni qui.",
+                                    "value": "Et est impedit necessitatibus atque perspiciatis nemo corrupti.",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -536,13 +536,13 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "fxji",
+                                    "value": "cdxaupdlgrs",
                                     "type": "text",
                                     "description": "Must not be greater than 2000 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "doloremque",
+                                    "value": "consectetur",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -673,7 +673,7 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "jjyicufgpgkqxnrvndklsns",
+                                    "value": "sdoswi",
                                     "type": "text",
                                     "description": "Must not be greater than 2000 characters."
                                 },
