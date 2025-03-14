@@ -96,9 +96,16 @@ class AuthenticationController extends Controller
             }
 
             // Image validation
+$imagePath = null;
+if($request->hasFile('image')) {
+    $image= $request->file('image');
+    $relativePath = $image->store('images', 'public');
+    $imagePath = url('storage/' . $relativePath);
+}
+
             if ($request->hasFile('image')) {
                 try {
-                    $path = Storage::url($request->file('image')->store('images', 'public'));
+                    $path = $imagePath ;
                     $user->image = $path;
                     $user->save();
                 } catch (\Exception $e) {
