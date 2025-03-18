@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "https:\/\/rrn24.techchantier.site\/Legal_First_Aid\/public\/api"
+            "value": "https:\/\/rrn24.techchantier.com\/Legal_First_Aid\/public\/api"
         }
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "242b79e8-e1c7-466a-acb1-1ebef5bbc2f1",
+        "_postman_id": "904668bd-f8cc-4c16-ac1c-a3acd91a51e5",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -117,7 +117,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"gerhold.camila@example.net\",\"password\":\"]C:{]<8jF31i|\"}"
+                            "raw": "{\"email\":\"marie45@example.net\",\"password\":\"Q>>lS1<@h)IyaFvhy\"}"
                         },
                         "description": "",
                         "auth": {
@@ -172,7 +172,7 @@
                                 {
                                     "id": "situationId",
                                     "key": "situationId",
-                                    "value": "velit",
+                                    "value": "ipsum",
                                     "description": ""
                                 },
                                 {
@@ -227,7 +227,7 @@
                                 {
                                     "id": "situationId",
                                     "key": "situationId",
-                                    "value": "corrupti",
+                                    "value": "consequatur",
                                     "description": ""
                                 },
                                 {
@@ -352,19 +352,19 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "bkmqrkygifwpnpjurmx",
+                                    "value": "nnlzfkpdajajjhmaykezvzdlc",
                                     "type": "text",
                                     "description": "Must not be greater than 2000 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Et est impedit necessitatibus atque perspiciatis nemo corrupti.",
+                                    "value": "Inventore aut inventore aut omnis qui nesciunt sint.",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "is_sensitive",
-                                    "value": "",
+                                    "value": "1",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -536,13 +536,13 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "cdxaupdlgrs",
+                                    "value": "vbp",
                                     "type": "text",
                                     "description": "Must not be greater than 2000 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "consectetur",
+                                    "value": "velit",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -673,13 +673,13 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "sdoswi",
+                                    "value": "nslxymlvtc",
                                     "type": "text",
                                     "description": "Must not be greater than 2000 characters."
                                 },
                                 {
                                     "key": "is_sensitive",
-                                    "value": "1",
+                                    "value": "",
                                     "type": "text",
                                     "description": ""
                                 },

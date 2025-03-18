@@ -26,7 +26,7 @@ endpoints:
         name: situationId
         description: ''
         required: true
-        example: velit
+        example: ipsum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -43,7 +43,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      situationId: velit
+      situationId: ipsum
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -182,7 +182,7 @@ endpoints:
         name: situationId
         description: ''
         required: true
-        example: corrupti
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -199,7 +199,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      situationId: corrupti
+      situationId: consequatur
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -381,7 +381,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 2000 characters.'
         required: false
-        example: bkmqrkygifwpnpjurmx
+        example: nnlzfkpdajajjhmaykezvzdlc
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -391,7 +391,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Et est impedit necessitatibus atque perspiciatis nemo corrupti.'
+        example: 'Inventore aut inventore aut omnis qui nesciunt sint.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -411,16 +411,16 @@ endpoints:
         name: is_sensitive
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      title: bkmqrkygifwpnpjurmx
-      description: 'Et est impedit necessitatibus atque perspiciatis nemo corrupti.'
-      is_sensitive: false
+      title: nnlzfkpdajajjhmaykezvzdlc
+      description: 'Inventore aut inventore aut omnis qui nesciunt sint.'
+      is_sensitive: true
     fileParameters:
       image: null
     responses:

@@ -11,7 +11,7 @@ return [
 
     // The base URL displayed in the docs. If this is empty, Scribe will use the value of config('app.url') at generation time.
     // If you're using `laravel` type, you can set this to a dynamic string, like '{{ config("app.tenant_url") }}' to get a dynamic base URL.
-    'base_url' => "https://rrn24.techchantier.site/Legal_First_Aid/public/api",
+    'base_url' => "https://rrn24.techchantier.com/Legal_First_Aid/public/api",
 
     'routes' => [
         [

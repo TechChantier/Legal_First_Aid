@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'https://rrn24.techchantier.site/Legal_First_Aid/public/api'
+    url: 'https://rrn24.techchantier.com/Legal_First_Aid/public/api'
 paths:
   /api/user:
     get:
@@ -58,12 +58,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: gerhold.camila@example.net
+                  example: marie45@example.net
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: ']C:{]<8jF31i|'
+                  example: Q>>lS1<@h)IyaFvhy
                   nullable: false
               required:
                 - email
@@ -422,7 +422,7 @@ paths:
         in: path
         name: situationId
         description: ''
-        example: velit
+        example: ipsum
         required: true
         schema:
           type: string
@@ -690,12 +690,12 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 2000 characters.'
-                  example: bkmqrkygifwpnpjurmx
+                  example: nnlzfkpdajajjhmaykezvzdlc
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Et est impedit necessitatibus atque perspiciatis nemo corrupti.'
+                  example: 'Inventore aut inventore aut omnis qui nesciunt sint.'
                   nullable: false
                 image:
                   type: string
@@ -705,7 +705,7 @@ paths:
                 is_sensitive:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: false
       security: []
     delete:
@@ -965,12 +965,12 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 2000 characters.'
-                  example: cdxaupdlgrs
+                  example: vbp
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: consectetur
+                  example: velit
                   nullable: false
                 image:
                   type: string
@@ -1133,7 +1133,7 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 2000 characters.'
-                  example: sdoswi
+                  example: nslxymlvtc
                   nullable: false
                 description:
                   type: string
@@ -1148,7 +1148,7 @@ paths:
                 is_sensitive:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: false
       security: []
     delete:

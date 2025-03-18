@@ -82,7 +82,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 2000 characters.'
         required: true
-        example: cdxaupdlgrs
+        example: vbp
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -92,7 +92,7 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: consectetur
+        example: velit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -119,8 +119,8 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      title: cdxaupdlgrs
-      description: consectetur
+      title: vbp
+      description: velit
       is_sensitive: false
     fileParameters:
       image: null
@@ -287,7 +287,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 2000 characters.'
         required: false
-        example: sdoswi
+        example: nslxymlvtc
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -317,15 +317,15 @@ endpoints:
         name: is_sensitive
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      title: sdoswi
-      is_sensitive: true
+      title: nslxymlvtc
+      is_sensitive: false
     fileParameters:
       image: null
     responses:

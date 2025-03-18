@@ -97,7 +97,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: gerhold.camila@example.net
+        example: marie45@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -107,15 +107,15 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: ']C:{]<8jF31i|'
+        example: Q>>lS1<@h)IyaFvhy
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: gerhold.camila@example.net
-      password: ']C:{]<8jF31i|'
+      email: marie45@example.net
+      password: Q>>lS1<@h)IyaFvhy
     fileParameters: []
     responses: []
     responseFields: []
