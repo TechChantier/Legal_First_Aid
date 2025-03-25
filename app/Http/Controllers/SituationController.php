@@ -266,7 +266,7 @@ if($request->hasFile('image')) {
 
             if ($request->hasFile('image')) {
                 try {
-                    $path = $imagePath ;
+                    $path = asset($imagePath) ;
                     $situation->image = $path;
                     $situation->save();
                 } catch (\Exception $e) {
