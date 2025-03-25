@@ -117,9 +117,16 @@ class SituationController extends Controller
             'is_sensitive' => $request->is_sensitive ?? false,
         ]);
 
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $relativePath = $image->store('images', 'public');
+            $imagePath = url('storage/'.$relativePath);
+        }
+
         if ($request->hasFile('image')) {
             try {
-                $path = Storage::url($request->file('image')->store('images', 'public'));
+                $path = $imagePath;
                 $situation->image = $path;
                 $situation->save();
             } catch (\Exception $e) {
@@ -243,7 +250,6 @@ class SituationController extends Controller
             'is_sensitive' => $request->is_sensitive ?? $situation->is_sensitive,
         ]);
 
-        
         // if ($request->hasFile('image')) {
         //     try {
         //         $path = Storage::url($request->file('image')->store('images', 'public'));
@@ -257,26 +263,25 @@ class SituationController extends Controller
         //     }
         // }
 
-$imagePath = null;
-if($request->hasFile('image')) {
-    $image= $request->file('image');
-    $relativePath = $image->store('images', 'public');
-    $imagePath = url('storage/' . $relativePath);
-}
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $relativePath = $image->store('images', 'public');
+            $imagePath = url('storage/'.$relativePath);
+        }
 
-            if ($request->hasFile('image')) {
-                try {
-                    $path = asset($imagePath) ;
-                    $situation->image = $path;
-                    $situation->save();
-                } catch (\Exception $e) {
-                    logger()->error('File upload failed', [
-                        'error' => $e->getMessage(),
-                        'trace' => $e->getTraceAsString(),
-                    ]);
-                }
+        if ($request->hasFile('image')) {
+            try {
+                $path = $imagePath;
+                $situation->image = $path;
+                $situation->save();
+            } catch (\Exception $e) {
+                logger()->error('File upload failed', [
+                    'error' => $e->getMessage(),
+                    'trace' => $e->getTraceAsString(),
+                ]);
             }
-
+        }
 
         return response()->json([
             'message' => 'Situation updated successfully',
