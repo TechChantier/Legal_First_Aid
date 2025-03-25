@@ -218,11 +218,26 @@ class SuggestionController extends Controller
             ]);
 
             // Handle the image upload if provided
-            if ($request->hasFile('image')) {
-                $imagePath = Storage::url($request->file('image')->store('suggestion_images', 'public'));
-                $suggestion->image = $imagePath;
+            $imagePath = null;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $relativePath = $image->store('images', 'public');
+            $imagePath = url('storage/'.$relativePath);
+        }
+
+        if ($request->hasFile('image')) {
+            try {
+                $path = $imagePath;
+                $suggestion->image = $path;
                 $suggestion->save();
+            } catch (\Exception $e) {
+                logger()->error('File upload failed', [
+                    'error' => $e->getMessage(),
+                    'trace' => $e->getTraceAsString(),
+                ]);
             }
+        }
+
 
             DB::commit();
             $suggestion->load([
@@ -385,9 +400,16 @@ class SuggestionController extends Controller
             'is_sensitive' => $request->is_sensitive ?? $suggestion->is_sensitive,
         ]);
 
+         $imagePath = null;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $relativePath = $image->store('images', 'public');
+            $imagePath = url('storage/'.$relativePath);
+        }
+
         if ($request->hasFile('image')) {
             try {
-                $path = Storage::url($request->file('image')->store('images', 'public'));
+                $path = $imagePath;
                 $suggestion->image = $path;
                 $suggestion->save();
             } catch (\Exception $e) {
@@ -397,7 +419,6 @@ class SuggestionController extends Controller
                 ]);
             }
         }
-
         $suggestion->load([
             'user',
             'situation',
